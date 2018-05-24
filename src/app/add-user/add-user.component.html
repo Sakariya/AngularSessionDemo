@@ -1,0 +1,33 @@
+<div class="container">
+
+    <form [formGroup]="userForm" (ngSubmit)="addUser()">
+        <div class="form-group" [ngClass]="{'has-error': !userForm.get('fullName').valid && userForm.get('fullName').dirty}">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" formControlName="fullName" placeholder="Full Name" />
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': !userForm.get('email').valid && userForm.get('email').dirty}">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" formControlName="email" placeholder="Email" />
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': !userForm.get('age').valid && userForm.get('age').dirty}">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" formControlName="age" placeholder="Age" />
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': !userForm.get('gender').valid && userForm.get('gender').dirty}">
+            <label for="gender">Gender</label>
+            <input type="text" class="form-control" formControlName="gender" placeholder="Gender" />
+        </div>
+        <div class="form-group" [ngClass]="{'has-error': !userForm.get('address').valid && userForm.get('address').dirty}">
+            <label for="address">Address</label>
+            <input type="text" class="form-control" formControlName="address" placeholder="Address" />
+        </div>
+        <div class="form-group">
+            <a [routerLink]="['/']" class="btn btn-default">Cancel</a>
+            <input type="submit" class="btn btn-success" [disabled]="userForm.invalid" value="Submit" />            
+        </div>
+    </form>
+
+
+    <p>Value: {{ userForm.value | json }}</p>
+    <p>Validation status: {{ userForm.status }}</p>
+</div>

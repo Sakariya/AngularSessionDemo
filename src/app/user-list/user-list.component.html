@@ -1,0 +1,60 @@
+<div class="container">
+    <div>
+        <a [routerLink]="['/add-user']">Add User</a>
+        <h1>
+            Get Data from component
+        </h1>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users;">
+                    <td>{{user.id}}</td>
+                    <td>{{user.fullName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br><br>
+    <div>
+        <h1>
+            Get Data from service
+        </h1>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                </tr>                
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userList;">
+                    <td>{{user.id}}</td>
+                    <td>{{user.fullName}}</td>
+                    <td>{{user.email}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.address}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
