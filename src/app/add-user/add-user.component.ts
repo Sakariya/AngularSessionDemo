@@ -29,7 +29,7 @@ export class AddUserComponent implements OnInit {
     }
 
     public addUser() {
-        console.log('userForm --->>> ', this.userForm);
+        console.log('userForm --->>> ', this.userForm.value);
         alert('Form Submitted');
         this.router.navigateByUrl('/');
     }

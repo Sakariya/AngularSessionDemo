@@ -1,13 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
 import { UserListComponent } from './user-list/user-list.component';
-import { appRoutes } from './app.route';
 import { AddUserComponent } from './add-user/add-user.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -20,7 +19,7 @@ import { AddUserComponent } from './add-user/add-user.component';
     FormsModule,
     BrowserModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
