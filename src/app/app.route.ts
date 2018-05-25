@@ -10,20 +10,12 @@ export const appRoutes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: '', children: [
-            {
-                path: 'user',
-                component: UserListComponent
-            }
-        ]
+        path: 'user',
+        component: UserListComponent
     },
     {
-        path: '', children: [
-            {
-                path: 'add-user',
-                component: AddUserComponent
-            }
-        ]
+        path: 'add-user',
+        component: AddUserComponent
     },
     // If page not found then
     {
